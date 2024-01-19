@@ -39,7 +39,7 @@ select * from customer;
 
 -- 4 -- List different countries.  
 
-select * from country;
+select distinct country from country;
 
 -- 5 --Display all active customers.
 
@@ -59,12 +59,12 @@ select * from film where rental_duration > 5;
 -- 8 --List the total number of films whose replacement cost is greater than $15 and less than $20. 
 
 select * from film;
-select * from film where replacement_cost between 15 and 20;
+select count(replacement_cost) from film where replacement_cost between 15 and 20;
 
 -- 9 --Display the count of unique first names of actors
 
 select * from actor;
-select distinct first_name from actor  ;
+select count(distinct first_name) from actor  ;
 
 -- 10 --Display the first 10 records from the customer table .
 
